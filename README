@@ -1,0 +1,20 @@
+   _________ ___  ____ ___ 
+  / ___/ __ `__ \/ __ `__ \
+ (__  ) / / / / / / / / / /
+/____/_/ /_/ /_/_/ /_/ /_/ 
+simple mind map
+
+Termianl ncurses based app to make mind maps in the linux command line 
+interface, made under GPL-2.0-only license.
+
+Features:
+	* Vim like keybindings
+	* Mouse support
+	* Zoom-in and zoom-out
+	* Color support
+	* Inport as JSON, csv file formats
+	* Export as JSON, csv file formats
+	* Hyperlink support
+	* Image display
+	* System calls 
+
