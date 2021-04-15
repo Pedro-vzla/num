@@ -1,20 +1,14 @@
-   _________ ___  ____ ___ 
-  / ___/ __ `__ \/ __ `__ \
- (__  ) / / / / / / / / / /
-/____/_/ /_/ /_/_/ /_/ /_/ 
-simple mind map
+   ____  __  ______ ___ 
+  / __ \/ / / / __ `__ \
+ / / / / /_/ / / / / / /
+/_/ /_/\__,_/_/ /_/ /_/ 
+                        
+numbers transpiler
 
-Termianl ncurses based app to make mind maps in the linux command line 
-interface, made under GPL-2.0-only license.
+Command line app to transpile numbers from words to decimal system and 
+vice versa, made under GPL-2.0-only license.
 
 Features:
-	* Vim like keybindings
-	* Mouse support
-	* Zoom-in and zoom-out
-	* Color support
-	* Inport as JSON, csv file formats
-	* Export as JSON, csv file formats
-	* Hyperlink support
-	* Image display
-	* System calls 
-
+	* Support until decimal number 999.999.999
+	* Transpile from "999" to "nine hundred ninety nine"
+	* Transpile from "nine hundred ninety nine" to "999"
