@@ -1,15 +1,18 @@
-// SPDX-License-Identifier: GPL-2.0-only
+/* SPDX-License-Identifier: GPL-2.0-only */
+
+#ifndef NUM_TRANS_NUM_H
+#define NUM_TRANS_NUM_H
 
 #define   CONVERTION_LIMIT                  999999999
 
-// definitions for decimal system
+/* definitions for decimal system */
 #define   UNIT       1
 #define   TEN        10
 #define   HUNDRED    100
 #define   THOUSAND   1000
 #define   MILLION    1000000
 
-// definitions for CLI options
+/* definitions for CLI options */
 #define   OPT_HELP                          0b00000001
 #define   OPT_LANGUAGE                      0b00000010
 #define   OPT_TO_INTEGER                    0b00000100
@@ -21,53 +24,4 @@
 #define   NO_OPTS_SUPPLIED                  0b00000000
 #define   CORRECT_TO_INT_OPTS               0b00000110
 
-const int digit[10] = {0,1,2,3,4,5,6,7,8,9};
-
-const char es_words_for_units[10][7] = {
-	"cero",
-	"uno",
-	"dos",
-	"tres",
-	"cuatro",
-	"cinco",
-	"seis",
-	"siete",
-	"ocho",
-	"nueve",
-};
-
-const char es_words_from_eleven_to_fefteen[6][8] = {
-	"",
-	"once",
-	"doce",
-	"trece",
-	"catorce",
-	"quince",
-};
-
-const char es_words_for_tens[10][10] = {
-	"",
-	"diez",
-	"veinte",
-	"treinta",
-	"cuarenta",
-	"cincuenta",
-	"sesenta",
-	"setenta",
-	"ochenta",
-	"noventa",
-};
-
-const char es_words_for_hundreds[10][14] = {
-	"",
-	"cien",
-	"doscientos",
-	"trescientos",
-	"cuatrocientos",
-	"quinientos",
-	"seiscientos",
-	"setecientos",
-	"ochocientos",
-	"novecientos",
-};
-
+#endif /* NUM_TRANS_NUM_H */

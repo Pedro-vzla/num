@@ -1,0 +1,79 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/pedro/Documents/development/projects/num/lib/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+$(BIN)	Makefile	/^$(BIN): $(OBJECTS)$/;"	t
+BIN	Makefile	/^BIN = num$/;"	m
+CC	Makefile	/^CC = cc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -g$/;"	m
+CONVERTION_LIMIT	num.h	/^#define   CONVERTION_LIMIT /;"	d
+CORRECT_TO_INT_OPTS	num.h	/^#define   CORRECT_TO_INT_OPTS /;"	d
+DEFS	Makefile	/^DEFS = -D$/;"	m
+HUNDRED	num.h	/^#define   HUNDRED /;"	d
+LIBDIR	Makefile	/^LIBDIR=.\/lib\/$/;"	m
+LIBS	Makefile	/^LIBS = -l lib$/;"	m
+MILLION	num.h	/^#define   MILLION /;"	d
+NO_OPTS_SUPPLIED	num.h	/^#define   NO_OPTS_SUPPLIED /;"	d
+NUM_TRANS_NUM_EN_H	num_en.h	/^#define NUM_TRANS_NUM_EN_H$/;"	d
+NUM_TRANS_NUM_ES_C	num_es.c	/^#define NUM_TRANS_NUM_ES_C$/;"	d	file:
+NUM_TRANS_NUM_ES_H	num_es.h	/^#define NUM_TRANS_NUM_ES_H$/;"	d
+NUM_TRANS_NUM_H	num.h	/^#define NUM_TRANS_NUM_H$/;"	d
+OBJECTS	Makefile	/^OBJECTS= num.o num_es.o$/;"	m
+ONLY_OPT_HELP_ENABLED	num.h	/^#define   ONLY_OPT_HELP_ENABLED /;"	d
+OPTS_STRING_AND_INTEGER_ENABLED	num.h	/^#define   OPTS_STRING_AND_INTEGER_ENABLED /;"	d
+OPT_HELP	num.h	/^#define   OPT_HELP /;"	d
+OPT_LANGUAGE	num.h	/^#define   OPT_LANGUAGE /;"	d
+OPT_TO_INTEGER	num.h	/^#define   OPT_TO_INTEGER /;"	d
+OPT_TO_STRING	num.h	/^#define   OPT_TO_STRING /;"	d
+TEN	num.h	/^#define   TEN /;"	d
+THOUSAND	num.h	/^#define   THOUSAND /;"	d
+TSTR_AND_TINT_ENABLED_WITH_LANG	num.h	/^#define   TSTR_AND_TINT_ENABLED_WITH_LANG /;"	d
+UNIT	num.h	/^#define   UNIT /;"	d
+VPATH	Makefile	/^VPATH = lib$/;"	m
+clean	Makefile	/^clean:$/;"	t
+depend	Makefile	/^depend:$/;"	t
+en_allowed_words	num_en.h	/^const char en_allowed_words[15][13] = {$/;"	v	typeref:typename:const char[15][13]
+en_alt_words_for_hundreds	num_en.h	/^struct en_alt_words_for_hundreds {$/;"	s
+en_alt_words_for_twenties	num_en.h	/^struct en_alt_words_for_twenties {$/;"	s
+en_words_for_hundreds	num_en.h	/^const char en_words_for_hundreds[2][8] = {$/;"	v	typeref:typename:const char[2][8]
+en_words_for_tens	num_en.h	/^const char en_words_for_tens[10][10] = {$/;"	v	typeref:typename:const char[10][10]
+en_words_for_units	num_en.h	/^const char en_words_for_units[10][6] = {$/;"	v	typeref:typename:const char[10][6]
+en_words_from_eleven_to_fefteen	num_en.h	/^const char en_words_from_eleven_to_fefteen[10][10] = {$/;"	v	typeref:typename:const char[10][10]
+es_allowed_words	num_es.h	/^const char es_allowed_words[15][13] = {$/;"	v	typeref:typename:const char[15][13]
+es_alt_words_for_hundreds	num_es.h	/^struct es_alt_words_for_hundreds {$/;"	s
+es_alt_words_for_twenties	num_es.h	/^struct es_alt_words_for_twenties {$/;"	s
+es_words_for_hundreds	num_es.h	/^const char es_words_for_hundreds[10][14] = {$/;"	v	typeref:typename:const char[10][14]
+es_words_for_tens	num_es.h	/^const char es_words_for_tens[10][10] = {$/;"	v	typeref:typename:const char[10][10]
+es_words_for_units	num_es.h	/^const char es_words_for_units[10][7] = {$/;"	v	typeref:typename:const char[10][7]
+es_words_from_eleven_to_fefteen	num_es.h	/^const char es_words_from_eleven_to_fefteen[10][12] = {$/;"	v	typeref:typename:const char[10][12]
+get_integer	num_es.c	/^int get_integer(char *app_name, char *language, char *str) {$/;"	f	typeref:typename:int
+get_string	num_es.c	/^char get_string(void) {$/;"	f	typeref:typename:char
+input_string_is_correct	num_es.c	/^void input_string_is_correct(char *app_name, char *language, char *string){$/;"	f	typeref:typename:void
+main	num.c	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+num_str	num_en.h	/^	char *num_str;$/;"	m	struct:en_alt_words_for_hundreds	typeref:typename:char *
+num_str	num_en.h	/^	char *num_str;$/;"	m	struct:en_alt_words_for_twenties	typeref:typename:char *
+num_str	num_es.h	/^	char *num_str;$/;"	m	struct:es_alt_words_for_hundreds	typeref:typename:char *
+num_str	num_es.h	/^	char *num_str;$/;"	m	struct:es_alt_words_for_twenties	typeref:typename:char *
+show_help	num_es.c	/^void show_help(char *bin_name){$/;"	f	typeref:typename:void
+str_has_from_eleven_to_fefteen	num_es.c	/^int str_has_from_eleven_to_fefteen(char str[]) {$/;"	f	typeref:typename:int
+str_has_hundreds	num_es.c	/^int str_has_hundreds(char str[]) {$/;"	f	typeref:typename:int
+str_has_millions	num_es.c	/^int str_has_millions(char str[]) {$/;"	f	typeref:typename:int
+str_has_tens	num_es.c	/^int str_has_tens(char str[]) {$/;"	f	typeref:typename:int
+str_has_thousands	num_es.c	/^int str_has_thousands(char str[]) {$/;"	f	typeref:typename:int
+str_has_units	num_es.c	/^int str_has_units(char str[]) {$/;"	f	typeref:typename:int
+to_string_arg_validation	num_es.c	/^void to_string_arg_validation( unsigned int integer, char *endptr, char *arg, char *app_name){$/;"	f	typeref:typename:void
+validate_empty_opts	num_es.c	/^void validate_empty_opts(uint8_t options, char *app_name) {$/;"	f	typeref:typename:void
+validate_help_opt	num_es.c	/^void validate_help_opt(uint8_t options, char *app_name) {$/;"	f	typeref:typename:void
+validate_to_integer_opt	num_es.c	/^void validate_to_integer_opt(char * arg, char *app_name, uint8_t options, char *tokens) {$/;"	f	typeref:typename:void
+validate_to_str_and_to_int_not_used_together	num_es.c	/^void validate_to_str_and_to_int_not_used_together(uint8_t options, char *app_name) {$/;"	f	typeref:typename:void
+value	num_en.h	/^	unsigned short int value;$/;"	m	struct:en_alt_words_for_hundreds	typeref:typename:unsigned short int
+value	num_en.h	/^	unsigned short int value;$/;"	m	struct:en_alt_words_for_twenties	typeref:typename:unsigned short int
+value	num_es.h	/^	unsigned short int value;$/;"	m	struct:es_alt_words_for_hundreds	typeref:typename:unsigned short int
+value	num_es.h	/^	unsigned short int value;$/;"	m	struct:es_alt_words_for_twenties	typeref:typename:unsigned short int
