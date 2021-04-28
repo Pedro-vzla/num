@@ -12,3 +12,12 @@ Features:
 	* Support until decimal number 999.999.999
 	* Transpile from "999" to "nine hundred ninety nine"
 	* Transpile from "nine hundred ninety nine" to "999"
+
+Example 1:
+./num --language es --to-integer "novecientos noventa y nueve millones uno"
+
+Example 2:
+./num -l ES -i "novecientos veinte y un millones ciento trece mil doscientos uno"
+
+Example 3:
+./num -l EN -i "One hundred eleven thousand one hundred eleven"

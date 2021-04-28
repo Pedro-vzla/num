@@ -294,9 +294,12 @@ void show_help(char *bin_name){
 	
 	fprintf(stdout, "Example 1:\n");
 	fprintf(stdout, "%s --language es --to-integer \"novecientos noventa y nueve millones uno\"\n\n", bin_name);
+
 	fprintf(stdout, "Example 2:\n");
 	fprintf(stdout, "%s -l ES -i \"novecientos veinte y un millones ciento trece mil doscientos uno\"\n\n", bin_name);
 
+	fprintf(stdout, "Example 3:\n");
+	fprintf(stdout, "%s -l EN -i \"One hundred eleven thousand one hundred eleven\"\n\n", bin_name);
 }
 
 void to_string_arg_validation( unsigned int integer, char *endptr, char *arg, char *app_name){
