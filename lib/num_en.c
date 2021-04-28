@@ -156,7 +156,6 @@ void en_input_string_is_correct(char *app_name, char *language, char *string){
 			}
 		}
 
-		//printf("%12s u=%d etf=%d t=%d h=%d\n", string, arr_u, arr_etf, arr_t, arr_h);
 		if (arr_u == 0 && arr_etf == 0 && arr_t == 0 && arr_h == 0 ) {
 			fprintf(stderr, "%s: Error: \"%s\" is not a number or allowed word\n", app_name, string);
 			exit(EXIT_FAILURE);
@@ -198,7 +197,6 @@ int en_get_integer(char *app_name, char *language, char *str) {
 			hundred = 0;
 		}
 
-		/* printf("%s=%d m=%d t=%d h=%d\n", str, output_int, million, thousand, hundred); */
 		str = strtok(NULL, " ");
 	}
 

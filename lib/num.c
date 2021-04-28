@@ -26,10 +26,8 @@ Copyright (c) 2021 Pedro Rondón <pedroprondonr@gmail.com>
 #include <string.h>
 #include <stdbool.h>
 #include <getopt.h>
-/*#include <locale.h>*/
 #include "num.h"
 #include "num_es.h"
-/*#include "lib/num_en.h"*/
 
 int main(int argc, char *argv[]) {
 	unsigned int integer;
@@ -60,20 +58,11 @@ int main(int argc, char *argv[]) {
 				break;
 			case 'i':
 				cli_opts |= OPT_TO_INTEGER;
-				// maybe put the value of optarg to a static variable to 
-				// use among various functions
 				tokens = strtok(optarg, " ");
 				break;
 			case 'l':
 				cli_opts |= OPT_LANGUAGE;
 				language = optarg;
-				/*
-				if (strcasecmp(language, "es")) {
-					setlocale(LC_ALL, "es_CL");
-				}
-				if (strcasecmp(language, "en")) {
-					setlocale(LC_ALL, "en_US");
-				}*/
 				break;
 			case 'h':
 				cli_opts |= OPT_HELP;
@@ -88,33 +77,11 @@ int main(int argc, char *argv[]) {
 				break;
 		}
 	}
-	/*printf("to-string=%d to-integer=%d languague=%d help=%d\n", opt_to_string, opt_to_integer, opt_languague, opt_help);*/
 	validate_to_str_and_to_int_not_used_together(cli_opts, app_name);
 	validate_help_opt(cli_opts, app_name);
 	validate_empty_opts(cli_opts, app_name);
 
 	validate_to_integer_opt(language, app_name, cli_opts, tokens);
-	/*printf("%s\n", tokens);*/
 
-
-	/*
-	if (opt_help == false && opt_languague == true && opt_to_integer == false && opt_to_string == true ) {
-		if ( (strcmp(language, "es") == 0 || strcmp(language, "en") == 0) && integer ) {
-			get_string();
-			exit(EXIT_SUCCESS);
-		} else {
-			fprintf(stderr, "%s: Error: invalid ISO-639-1 code suplied to -l|--language option", app_name);
-			exit(EXIT_FAILURE);
-		}
-	} 
-
-	if (opt_help == false && opt_languague == true && opt_to_integer == false && opt_to_string == false ) {
-		fprintf(stderr, "%s: Error: option -i|--to-integer or -s|--to-integer not especified\n", app_name);
-		exit(EXIT_FAILURE);
-	} 
-
-	if (opt_help == false && opt_languague == false && opt_to_integer == false && opt_to_string == false ) {
-	}
-	*/
 	return 0;
 }
