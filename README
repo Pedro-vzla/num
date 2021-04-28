@@ -8,10 +8,24 @@ numbers transpiler
 Command line app to transpile numbers from words to decimal system and 
 vice versa, made under GPL-2.0-only license.
 
+[WARNING]
+	* I only tested it on linux.
+	* I'm working on making it POSIX compliant. 
+	* Working in order to make it cross compiling for support Windows and Mac too.
+	* The only documentation available is the source code itself and 
+	  the --help option of the command
+
 Features:
 	* Support until decimal number 999.999.999
 	* Transpile from "999" to "nine hundred ninety nine"
 	* Transpile from "nine hundred ninety nine" to "999"
+
+Install:
+Run de below commands to install and compile
+
+	git clone https://github.com/Pedro-vzla/num
+	cd num
+	make
 
 Example 1:
 ./num --language es --to-integer "novecientos noventa y nueve millones uno"
