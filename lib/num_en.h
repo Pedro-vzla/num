@@ -15,80 +15,14 @@ struct en_alt_words_for_hundreds {
 	unsigned short int value;
 };
 
-const char en_words_for_units[10][6] = {
-	"zero",
-	"one",
-	"two",
-	"three",
-	"four",
-	"five",
-	"six",
-	"seven",
-	"eight",
-	"nine",
-};
 
-const char en_words_from_eleven_to_fefteen[10][10] = {
-	"",
-	"eleven",
-	"twelve",
-	"thirteen",
-	"fourteen",
-	"fifteen",
-	"sixteen",
-	"seventeen",
-	"eighteen",
-	"nineteen",
-};
-
-const char en_words_for_tens[10][10] = {
-	"",
-	"ten",
-	"twenty",
-	"thirty",
-	"forty",
-	"fifty",
-	"sixty",
-	"seventy",
-	"eighty",
-	"ninety",
-};
-
-const char en_words_for_hundreds[2][8] = {
-	"",
-	"hundred",
-};
-
-const char en_allowed_words[15][13] = {
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-	"",
-};
-
-int str_has_units(char str[]);
-int str_has_tens(char str[]);
-int str_has_from_eleven_to_fefteen(char str[]);
-int str_has_thousands(char str[]);
-int str_has_millions(char str[]);
-int get_integer(char *app_name, char *language, char *str);
-char get_string(void);
-void show_help(char *bin_name);
-void to_string_arg_validation( unsigned int integer, char *endptr, char *arg, char *app_name);
-void validate_to_str_and_to_int_not_used_together(uint8_t options, char *app_name);
-void validate_help_opt(uint8_t options, char *app_name);
-void validate_empty_opts(uint8_t options, char *app_name);
-void validate_to_integer_opt(char * arg, char *app_name, uint8_t options, char *tokens);
+int en_str_has_units(char str[]);
+int en_str_has_tens(char str[]);
+int en_str_has_from_eleven_to_fefteen(char str[]);
+int en_str_has_hundreds(char str[]);
+int en_str_has_thousands(char str[]);
+int en_str_has_millions(char str[]);
+int en_get_integer(char *app_name, char *language, char *str);
+void en_input_string_is_correct(char *app_name, char *language, char *string);
 
 #endif  /* NUM_TRANS_NUM_EN_H */

@@ -12,6 +12,7 @@
 /* #include <locale.h> */
 
 #include "num_es.h"
+#include "num_en.h"
 #include "num.h"
 
 #ifndef NUM_TRANS_NUM_ES_C
@@ -198,34 +199,35 @@ int str_has_millions(char str[]) {
 }
 
 void input_string_is_correct(char *app_name, char *language, char *string){
-	int i; /* arr_u=0, arr_etf=0, arr_t=0, arr_h=0; */
 
 	if (strcasecmp(language, "es") == 0) {
+		int i; 
+		int arr_u=0, arr_etf=0, arr_t=0, arr_h=0;
 		for( i=0; i<15; i++ ) {
 			if (i < 10 && strcasecmp(string, es_words_for_units[i]) == 0) {
-				/* arr_u = 1; */
+				 arr_u = 1; 
 			}
 			if (i < 10 && strcasecmp(string, es_words_from_eleven_to_fefteen[i]) == 0) {
-				/* arr_etf = 1; */
+				 arr_etf = 1; 
 			}
 			if (i < 10 && strcasecmp(string, es_words_for_tens[i]) == 0) {
-				/* arr_t = 1; */
+				 arr_t = 1; 
 			}
 			if ( strcasecmp(string, es_allowed_words[i]) == 0) {
-				/* arr_t = 1; */
+				 arr_t = 1; 
 			}
 			if (i < 10 && strcasecmp(string, es_words_for_hundreds[i]) == 0) {
-				/* arr_h = 1; */
+				 arr_h = 1; 
 			}
 		}
 
-		/*
-		printf("%12s u=%d etf=%d t=%d h=%d\n", string, arr_u, arr_etf, arr_t, arr_h);
+		
+		/* printf("%12s u=%d etf=%d t=%d h=%d\n", string, arr_u, arr_etf, arr_t, arr_h); */
 		if (arr_u == 0 && arr_etf == 0 && arr_t == 0 && arr_h == 0 ) {
 			fprintf(stderr, "%s: Error: \"%s\" no es un número o una palabra permitida\n", app_name, string);
 			exit(EXIT_FAILURE);
 		}
-		*/
+		
 		
 	}
 }
@@ -237,6 +239,7 @@ int get_integer(char *app_name, char *language, char *str) {
 	int million=0;
 	int thousand=0;
 	int hundred = 0;
+
 	while (str != NULL) {
 
 		input_string_is_correct(app_name, language, str);
@@ -326,7 +329,7 @@ void validate_empty_opts(uint8_t options, char *app_name) {
 	}
 }
 
-void validate_to_integer_opt(char * arg, char *app_name, uint8_t options, char *tokens) {
+void validate_to_integer_opt(char * language, char *app_name, uint8_t options, char *tokens) {
 	if (!(options & OPT_LANGUAGE)) {
 		fprintf(stderr, "%s: Error: missing -l|--language option\n", app_name);
 		fprintf(stderr, "option -i|--to-integer needs ");
@@ -334,15 +337,20 @@ void validate_to_integer_opt(char * arg, char *app_name, uint8_t options, char *
 		exit(EXIT_FAILURE);
 	}
 
-	if(strcasecmp(arg, "es") != 0 && strcasecmp(arg, "en") != 0) {
+	if(strcasecmp(language, "es") != 0 && strcasecmp(language, "en") != 0) {
 		fprintf(stderr, "%s: Error: unknown or unsuported argument\n", app_name);
 		fprintf(stderr, "empty or unsuported ISO-639-1 code suplied to -l|--language option\n");
 		exit(EXIT_FAILURE);
 	} 
 
 	if (options == CORRECT_TO_INT_OPTS) {
-		if ( strcasecmp(arg, "es") == 0 || strcasecmp(arg, "en") == 0 ) {
-			printf("%d\n", get_integer(app_name, arg, tokens));
+		if ( strcasecmp(language, "es") == 0 ) {
+			printf("%d\n", get_integer(app_name, language, tokens));
+			exit(EXIT_SUCCESS);
+		}			
+
+		if ( strcasecmp(language, "en") == 0 ) {
+			printf("%d\n", en_get_integer(app_name, language, tokens));
 			exit(EXIT_SUCCESS);
 		}			
 	} 
